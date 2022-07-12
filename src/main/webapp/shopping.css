@@ -1,0 +1,23 @@
+.navbar-custom {
+    background-color: #cd5b45;
+    color: white;
+}
+
+
+.button{
+    background-color: #203354;
+    color: white;
+    align-self: center;
+    justify-content: center;
+    width: 25%;
+}
+
+form{
+    padding: 5%;
+}
+
+.list-group{
+    position: relative;
+    text-align: left;
+
+}
