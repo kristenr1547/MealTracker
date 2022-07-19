@@ -27,8 +27,8 @@
 				
 				 <tr>
 				<td>${tempMeal.mealName}</td>
-				<td><a href="${tempLink}">Edit</a></td>
-				<td><a href="${deleteLink}" onclick="if (!(confirm('Are you sure you want to delete this meal?'))) return false">Delete</a></td>
+				<td><a class="btn btn-outline-primary" href="${tempLink}">Edit</a></td>
+				<td><a class="btn btn-outline-danger" href="${deleteLink}" onclick="if (!(confirm('Are you sure you want to delete this meal?'))) return false">Delete</a></td>
 				</tr>
 				</c:forEach>
 

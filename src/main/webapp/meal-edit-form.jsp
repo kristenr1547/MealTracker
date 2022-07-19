@@ -1,5 +1,9 @@
 <%@ page import="java.util.*,controllers.*,model.*,jdbc.*"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
+
+
+
 <jsp:include page="header.jsp"/>
     <div class="grid" style="justify: center;">
         <div>

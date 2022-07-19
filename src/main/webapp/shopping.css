@@ -9,7 +9,7 @@
     color: white;
     align-self: center;
     justify-content: center;
-    width: 25%;
+    width: 15%;
 }
 
 form{
@@ -19,5 +19,4 @@ form{
 .list-group{
     position: relative;
     text-align: left;
-
 }

@@ -19,13 +19,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Items</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Meals</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Cost</a>
+              <a class="nav-link" href="mealServlet">Meals</a>
             </li>
           </ul>
         </div>
