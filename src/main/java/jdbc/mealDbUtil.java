@@ -114,4 +114,21 @@ public void updateMeal(Meal meal) throws SQLException {
 	
 }
 
+public void deleteMeal(Meal meal) throws SQLException{
+	Connection conn = null;
+	PreparedStatement stmt = null;
+	ResultSet rs = null;
+	String sql = "DELETE FROM meal WHERE mealId = ?";
+	try {
+		conn = datasource.getConnection();
+		stmt = conn.prepareStatement(sql);
+		stmt.setInt(1, meal.getMealID());
+		stmt.executeUpdate();
+	}
+	finally {
+		jdbcUtil.close(conn,stmt,rs);
+	}
+	
+}
+
 }

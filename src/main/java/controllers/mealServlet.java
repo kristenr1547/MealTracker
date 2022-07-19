@@ -61,6 +61,9 @@ public class mealServlet extends HttpServlet {
 			case "UPDATE":
 				updateMeal(request,response);
 				break;
+			case "DELETE":
+				deleteMeal(request,response);
+				break;
 			default:
 				listMeals(request,response);
 			}
@@ -68,6 +71,22 @@ public class mealServlet extends HttpServlet {
 		e.printStackTrace();
 		throw new ServletException(e);
 	}
+	}
+
+
+	private void deleteMeal(HttpServletRequest request, HttpServletResponse response) throws Exception{
+		//read student info
+		int id = Integer.parseInt(request.getParameter("mealID"));
+		String name = request.getParameter("mealName");
+		String type = request.getParameter("mealType");
+		String day = request.getParameter("mealDay");
+		//create new meal object
+		Meal meal = new Meal(id,name,type,day);
+		//add student to the database
+		dbUtil.deleteMeal(meal);
+		//send back to the main page
+		listMeals(request,response);
+		
 	}
 
 
@@ -87,10 +106,6 @@ public class mealServlet extends HttpServlet {
 	}
 
 
-
-
-
-
 	private void loadMeal(HttpServletRequest request, HttpServletResponse response) throws Exception{
 		//get id
 		int mealID = Integer.valueOf(request.getParameter("mealID"));
@@ -104,10 +119,6 @@ public class mealServlet extends HttpServlet {
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/meal-edit-form.jsp");
 		dispatcher.forward(request,response);
 	}
-
-
-
-
 
 
 	private void addMeal(HttpServletRequest request, HttpServletResponse response) throws Exception {
